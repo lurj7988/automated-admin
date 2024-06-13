@@ -10,7 +10,7 @@
 
     <artifactId>automated-admin-adapter</artifactId>
     <packaging>jar</packaging>
-    <name>system-admin-adapter</name>
+    <name>automated-admin-adapter</name>
 
     <dependencies>
         <dependency>

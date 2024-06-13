@@ -32,7 +32,7 @@
         <module>automated-admin-app</module>
         <module>automated-admin-domain</module>
         <module>automated-admin-infrastructure</module>
-        <module>automated-admin-start</module>
+        <module>automated-admin-starter</module>
     </modules>
 
     <dependencies>

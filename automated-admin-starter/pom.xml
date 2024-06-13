@@ -8,9 +8,9 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>automated-admin-start</artifactId>
+    <artifactId>automated-admin-starter</artifactId>
     <packaging>jar</packaging>
-    <name>automated-admin-start</name>
+    <name>automated-admin-starter</name>
 
     <dependencies>
         <dependency>
