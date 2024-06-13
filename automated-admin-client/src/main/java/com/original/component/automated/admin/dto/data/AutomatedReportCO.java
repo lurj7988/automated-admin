@@ -13,6 +13,9 @@ import java.time.Instant;
 public class AutomatedReportCO extends AbstractClientObject<String> {
 
     @Size(max = 50)
+    private String reportGuid;
+
+    @Size(max = 50)
     private String testSuite;
 
     @Size(max = 50)

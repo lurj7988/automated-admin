@@ -40,7 +40,7 @@
     <logger name="com.original.component.automated.admin" level="DEBUG"/>
     <logger name="org.hibernate.engine.spi.QueryParameters" level="DEBUG"/>
     <logger name="org.hibernate.engine.query.spi.HQLQueryPlan" level="DEBUG"/>
-    <logger name="org.hibernate.type.descriptor.sql.BasicBinder" level="TRACE"/>
+    <logger name="org.hibernate.type.descriptor.sql.BasicBinder" level="DEBUG"/>
     <!--<logger name="org.springframework.web" level="DEBUG"/>-->
 
     <!--数据库日志-->

@@ -17,6 +17,10 @@ import java.time.Instant;
 public class AutomatedReport extends IDEntity {
 
     @Size(max = 50)
+    @Column(name = "report_guid", length = 50)
+    private String reportGuid;
+
+    @Size(max = 50)
     @Column(name = "test_suite", length = 50)
     private String testSuite;
 

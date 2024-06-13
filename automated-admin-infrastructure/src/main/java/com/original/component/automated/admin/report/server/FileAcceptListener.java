@@ -15,6 +15,7 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 
 @Slf4j
 public class FileAcceptListener implements FileTransferListener {
@@ -27,15 +28,12 @@ public class FileAcceptListener implements FileTransferListener {
         try {
             File file = path.toFile();
             //解压文件
-            String destDirectory = file.getParent() + File.separator + file.getName().substring(0, file.getName().lastIndexOf("."));
-            FileUtils.unzip(file.getPath(), destDirectory);
+            String reportPath = file.getParent() + File.separator + file.getName().substring(0, file.getName().lastIndexOf("."));
+            FileUtils.unzip(file.getPath(), reportPath);
             //读取json文件
-            try (InputStream stream = Files.newInputStream(Paths.get(destDirectory + File.separator + "ReportData.json"))) {
+            try (InputStream stream = Files.newInputStream(Paths.get(reportPath + File.separator + "ReportData.json"))) {
                 ReportData reportData = JSON.parseObject(stream, ReportData.class, Feature.AutoCloseSource);
-                //TODO: 保存数据
-                log.info(reportData.getHostAddress());
-                AutomatedReportCO automatedReportCO = new AutomatedReportCO();
-                automatedReportCO.setId(reportData.getReportGuid());
+                AutomatedReportCO automatedReportCO = convertReportData2CO(reportData, reportPath.replace("\\", "/").replace(NettyConstants.REPORT_PATH + "/", ""));
                 AutomatedReportSaveCmd cmd = new AutomatedReportSaveCmd(automatedReportCO);
                 automatedReportCQRS.save(cmd);
             }
@@ -44,9 +42,37 @@ public class FileAcceptListener implements FileTransferListener {
         }
     }
 
+    private static AutomatedReportCO convertReportData2CO(ReportData reportData, String reportPath) {
+        AutomatedReportCO automatedReportCO = new AutomatedReportCO();
+        automatedReportCO.setReportGuid(reportData.getReportGuid());
+        automatedReportCO.setHostAddress(reportData.getHostAddress());
+        automatedReportCO.setReportType(reportData.getReportType());
+        automatedReportCO.setBrowserType(reportData.getBrowserType());
+        automatedReportCO.setDatabaseType(reportData.getDataBaseType());
+        automatedReportCO.setProductName(reportData.getProductName());
+        automatedReportCO.setProductVersion(reportData.getProductVersion());
+        automatedReportCO.setTestSuite(reportData.getTestSuite());
+        automatedReportCO.setCreateTime(reportData.getUploadTime());
+        automatedReportCO.setReportPath(reportPath);
+        return automatedReportCO;
+    }
+
     @Override
     public void onFailure(Path path) {
 
+    }
+
+    @Override
+    public void onFinished(Path path) {
+        try {
+            File file = path.toFile();
+            //解压文件
+            String reportPath = file.getParent() + File.separator + file.getName().substring(0, file.getName().lastIndexOf("."));
+            //移动到解压目录
+            Files.move(path, Paths.get(reportPath + File.separator + file.getName()), StandardCopyOption.REPLACE_EXISTING);
+        } catch (IOException e) {
+            log.error("Error while moving file: {}", path, e);
+        }
     }
 
 }

@@ -1,6 +1,5 @@
 package com.original.component.automated.admin.report.server;
 
-import com.original.boot.core.utils.classpath.ClassPathUtils;
 import com.original.netty.handler.FileTransferListener;
 import com.original.netty.server.ReportServer;
 import org.springframework.beans.factory.annotation.Value;
@@ -16,7 +15,7 @@ public class NettyConfiguration {
 
     @Bean
     public ReportServer reportServer(List<FileTransferListener> listeners) {
-        return new ReportServer(Paths.get(ClassPathUtils.getDeployWarPath() + "data"), listeners);
+        return new ReportServer(Paths.get(NettyConstants.REPORT_PATH), listeners);
     }
 
     @Bean
@@ -24,10 +23,8 @@ public class NettyConfiguration {
         return new FileAcceptListener();
     }
 
-
-
-//    @Bean
-//    public ApplicationRunner applicationRunner(ReportServer reportServer) {
-//        return args -> reportServer.start(port);
-//    }
+    @Bean
+    public ApplicationRunner applicationRunner(ReportServer reportServer, @Value("${netty.port:7397}") int port) {
+        return args -> reportServer.start(port);
+    }
 }
