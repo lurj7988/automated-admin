@@ -1,7 +1,8 @@
 package com.original.component.automated.admin.report.server;
 
-import com.original.netty.handler.FileTransferListener;
-import com.original.netty.server.ReportServer;
+
+import com.original.component.automated.netty.handler.FileTransferListener;
+import com.original.component.automated.netty.server.ReportServer;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.context.annotation.Bean;

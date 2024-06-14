@@ -17,12 +17,13 @@ out/
 
 ### NetBeans ###
 nbproject/private/
-build/
+#build/
 nbbuild/
 dist/
 nbdist/
-bin/
+#bin/
 doc/
 .DS_Store
 
 webapp/
+jre/

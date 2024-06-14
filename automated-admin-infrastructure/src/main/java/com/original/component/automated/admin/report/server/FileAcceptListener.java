@@ -5,9 +5,10 @@ import com.alibaba.fastjson.parser.Feature;
 import com.original.component.automated.admin.api.AutomatedReportCQRS;
 import com.original.component.automated.admin.dto.data.AutomatedReportCO;
 import com.original.component.automated.admin.dto.data.AutomatedReportSaveCmd;
-import com.original.netty.domain.ReportData;
-import com.original.netty.handler.FileTransferListener;
-import com.original.netty.utils.FileUtils;
+
+import com.original.component.automated.netty.domain.ReportData;
+import com.original.component.automated.netty.handler.FileTransferListener;
+import com.original.component.automated.netty.utils.FileUtils;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.annotation.Resource;

@@ -26,9 +26,8 @@
             <artifactId>spring-boot-original-commons</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.original</groupId>
-            <artifactId>report-server</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <groupId>com.original.component</groupId>
+            <artifactId>automated-report-core</artifactId>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>

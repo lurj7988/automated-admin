@@ -1,0 +1,41 @@
+<assembly>
+	<id>linux</id>
+	<formats>
+		<format>tar.gz</format>
+	</formats>
+	<includeBaseDirectory>false</includeBaseDirectory>
+	<dependencySets>
+		<dependencySet>
+			<outputDirectory>Report Collectd/lib</outputDirectory>
+		</dependencySet>
+	</dependencySets>
+	<fileSets>
+		<fileSet>
+			<directory>build</directory>
+			<outputDirectory>Report Collectd</outputDirectory>
+			<includes>
+				<include>config/**</include>
+			</includes>
+		</fileSet>
+		<fileSet>
+			<directory>build/wrapper-linux</directory>
+			<outputDirectory>Report Collectd/wrapper</outputDirectory>
+		</fileSet>
+		<fileSet>
+			<directory>build/cache</directory>
+			<outputDirectory>Report Collectd/cache</outputDirectory>
+		</fileSet>
+		<fileSet>
+			<directory>build/plugins</directory>
+			<outputDirectory>Report Collectd/lib</outputDirectory>
+		</fileSet>
+		<fileSet>
+			<directory>build/logs</directory>
+			<outputDirectory>Report Collectd/wrapper/logs</outputDirectory>
+		</fileSet>
+		<fileSet>
+			<directory>build/tmp</directory>
+			<outputDirectory>Report Collectd/tmp</outputDirectory>
+		</fileSet>
+	</fileSets>
+</assembly>

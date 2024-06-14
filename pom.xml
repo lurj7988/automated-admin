@@ -33,6 +33,7 @@
         <module>automated-admin-domain</module>
         <module>automated-admin-infrastructure</module>
         <module>automated-admin-starter</module>
+        <module>automated-report</module>
     </modules>
 
     <dependencies>
@@ -75,6 +76,11 @@
             <dependency>
                 <groupId>com.original.component</groupId>
                 <artifactId>automated-admin-infrastructure</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.original.component</groupId>
+                <artifactId>automated-report-core</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <!--Project modules End-->
