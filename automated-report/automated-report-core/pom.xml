@@ -13,7 +13,7 @@
     </parent>
 
     <artifactId>automated-report-core</artifactId>
-    <name>automated-report-core</name>
+    <name>automated-report-core ${project.version}</name>
     <description>Automated Report Core</description>
 
     <dependencies>
@@ -30,7 +30,7 @@
             <artifactId>netty-all</artifactId>
         </dependency>
         <!-- Protostuff -->
-        <dependency>
+        <!--<dependency>
             <groupId>io.protostuff</groupId>
             <artifactId>protostuff-core</artifactId>
         </dependency>
@@ -41,7 +41,7 @@
         <dependency>
             <groupId>org.objenesis</groupId>
             <artifactId>objenesis</artifactId>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>

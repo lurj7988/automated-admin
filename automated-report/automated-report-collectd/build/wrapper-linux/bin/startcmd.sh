@@ -39,8 +39,8 @@
 ### END INIT INFO
 
 # Application
-APP_NAME="Report Collectd"
-APP_LONG_NAME="Report Collectd"
+APP_NAME="ReportCollectd"
+APP_LONG_NAME="ReportCollectd"
 
 # If uncommented (and set to false), APP_NAME and APP_LONG_NAME will no longer 
 # be passed to the wrapper. See documentation for details.

@@ -11,7 +11,7 @@
     <artifactId>automated-admin-parent</artifactId>
     <version>0.0.2-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>automated-admin</name>
+    <name>automated-admin ${project.version}</name>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -33,6 +33,7 @@
         <module>automated-admin-domain</module>
         <module>automated-admin-infrastructure</module>
         <module>automated-admin-starter</module>
+        <module>automated-admin-distribution</module>
         <module>automated-report</module>
     </modules>
 
@@ -76,6 +77,16 @@
             <dependency>
                 <groupId>com.original.component</groupId>
                 <artifactId>automated-admin-infrastructure</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.original.component</groupId>
+                <artifactId>automated-admin-starter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.original.component</groupId>
+                <artifactId>automated-admin-distribution</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
@@ -139,6 +150,10 @@
                 <plugin>
                      <artifactId>maven-deploy-plugin</artifactId>
                     <version>3.0.0</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-assembly-plugin</artifactId>
+                    <version>3.6.0</version>
                 </plugin>
                 <plugin>
                     <groupId>org.springframework.boot</groupId>

@@ -10,7 +10,7 @@
 
     <artifactId>automated-admin-app</artifactId>
     <packaging>jar</packaging>
-    <name>automated-admin-app</name>
+    <name>automated-admin-app ${project.version}</name>
 
     <dependencies>
         <dependency>

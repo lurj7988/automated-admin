@@ -10,7 +10,7 @@
 
     <artifactId>automated-admin-domain</artifactId>
     <packaging>jar</packaging>
-    <name>automated-admin-domain</name>
+    <name>automated-admin-domain ${project.version}</name>
 
     <dependencies>
         <dependency>

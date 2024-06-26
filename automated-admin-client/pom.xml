@@ -10,7 +10,7 @@
 
     <artifactId>automated-admin-client</artifactId>
     <packaging>jar</packaging>
-    <name>automated-admin-client</name>
+    <name>automated-admin-client ${project.version}</name>
 
     <dependencies>
         <dependency>

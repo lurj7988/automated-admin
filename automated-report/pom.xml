@@ -12,7 +12,7 @@
     </parent>
     <artifactId>automated-report</artifactId>
     <packaging>pom</packaging>
-    <name>automated-report</name>
+    <name>automated-report ${project.version}</name>
     <description>Automated Report</description>
 
     <properties>
@@ -61,7 +61,7 @@
                 <version>${netty.version}</version>
             </dependency>
             <!-- Protostuff -->
-            <dependency>
+            <!--<dependency>
                 <groupId>io.protostuff</groupId>
                 <artifactId>protostuff-core</artifactId>
                 <version>${protostuff.version}</version>
@@ -75,7 +75,7 @@
                 <groupId>org.objenesis</groupId>
                 <artifactId>objenesis</artifactId>
                 <version>${objenesis.version}</version>
-            </dependency>
+            </dependency>-->
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>

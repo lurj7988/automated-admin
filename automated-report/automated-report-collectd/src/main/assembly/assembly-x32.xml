@@ -6,36 +6,36 @@
 	<includeBaseDirectory>false</includeBaseDirectory>
 	<dependencySets>
 		<dependencySet>
-			<outputDirectory>Report Collectd/lib</outputDirectory>
+			<outputDirectory>ReportCollectd/lib</outputDirectory>
 		</dependencySet>
 	</dependencySets>
 	<fileSets>
 		<fileSet>
 			<directory>build</directory>
-			<outputDirectory>Report Collectd</outputDirectory>
+			<outputDirectory>ReportCollectd</outputDirectory>
 			<includes>
 				<include>config/**</include>
 			</includes>
 		</fileSet>
 		<fileSet>
 			<directory>build/wrapper-windows</directory>
-			<outputDirectory>Report Collectd/wrapper</outputDirectory>
+			<outputDirectory>ReportCollectd/wrapper</outputDirectory>
 		</fileSet>
 		<fileSet>
 			<directory>build/cache</directory>
-			<outputDirectory>Report Collectd/cache</outputDirectory>
+			<outputDirectory>ReportCollectd/cache</outputDirectory>
 		</fileSet>
 		<fileSet>
 			<directory>build/plugins</directory>
-			<outputDirectory>Report Collectd/lib</outputDirectory>
+			<outputDirectory>ReportCollectd/lib</outputDirectory>
 		</fileSet>
 		<fileSet>
 			<directory>build/logs</directory>
-			<outputDirectory>Report Collectd/wrapper/logs</outputDirectory>
+			<outputDirectory>ReportCollectd/wrapper/logs</outputDirectory>
 		</fileSet>
 		<fileSet>
 			<directory>build/tmp</directory>
-			<outputDirectory>Report Collectd/tmp</outputDirectory>
+			<outputDirectory>ReportCollectd/tmp</outputDirectory>
 		</fileSet>
 	</fileSets>
 </assembly>

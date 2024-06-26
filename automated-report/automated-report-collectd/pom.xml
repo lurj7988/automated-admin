@@ -12,7 +12,7 @@
     </parent>
 
     <artifactId>automated-report-collectd</artifactId>
-    <name>automated-report-collectd</name>
+    <name>automated-report-collectd ${project.version}</name>
     <description>Automated Report Collectd</description>
 
     <dependencies>
@@ -45,7 +45,7 @@
                             <goal>single</goal>
                         </goals>
                         <configuration>
-                            <finalName>Report Collectd</finalName>
+                            <finalName>ReportCollectd</finalName>
                             <appendAssemblyId>true</appendAssemblyId>
                             <descriptors>
                                 <descriptor>src/main/assembly/assembly-linux.xml</descriptor>
