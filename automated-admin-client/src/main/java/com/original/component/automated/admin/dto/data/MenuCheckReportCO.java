@@ -7,22 +7,20 @@ import lombok.EqualsAndHashCode;
 
 import javax.validation.constraints.Size;
 import java.time.Instant;
+import java.util.List;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
-public class AutomatedReportCO extends AbstractClientObject<String> {
+public class MenuCheckReportCO extends AbstractClientObject<String> {
 
     @Size(max = 50)
-    private String reportGuid;
+    private String url;
 
     @Size(max = 50)
-    private String testSuite;
+    private String loginid;
 
     @Size(max = 50)
-    private String reportType;
-
-    @Size(max = 50)
-    private String reportPath;
+    private String password;
 
     @Size(max = 50)
     private String hostAddress;
@@ -30,15 +28,5 @@ public class AutomatedReportCO extends AbstractClientObject<String> {
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "Asia/Shanghai")
     private Instant createTime;
 
-    @Size(max = 50)
-    private String productName;
-
-    @Size(max = 50)
-    private String productVersion;
-
-    @Size(max = 50)
-    private String databaseType;
-
-    @Size(max = 50)
-    private String browserType;
+    private List<MenuCheckResultCO> menuCheckResultCOS;
 }

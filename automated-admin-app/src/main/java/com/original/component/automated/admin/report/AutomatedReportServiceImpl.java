@@ -28,7 +28,7 @@ public class AutomatedReportServiceImpl extends AbstractCQRS<AutomatedReportCO, 
     }
 
     @Override
-    public void afterSave(AbstractCommand<AutomatedReportCO, String> abstractCommand) throws Exception {
+    public void afterSave(AbstractCommand<AutomatedReportCO, String> abstractCommand, AutomatedReport saved) throws Exception {
 
     }
 
