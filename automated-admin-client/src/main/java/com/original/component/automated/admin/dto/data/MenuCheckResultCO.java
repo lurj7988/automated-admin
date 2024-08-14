@@ -19,7 +19,7 @@ public class MenuCheckResultCO extends AbstractClientObject<String> {
     @Size(max = 50)
     private String name;
 
-    @Size(max = 50)
+    @Size(max = 500)
     private String url;
 
     @Size(max = 50)

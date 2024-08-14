@@ -15,8 +15,8 @@ import java.time.Instant;
 @Entity
 @Table(name = "menu_check_report")
 public class MenuCheckReport extends IDEntity {
-    @Size(max = 50)
-    @Column(name = "url", length = 50)
+    @Size(max = 500)
+    @Column(name = "url", length = 500)
     private String url;
 
     @Size(max = 50)

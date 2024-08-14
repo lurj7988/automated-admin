@@ -13,7 +13,7 @@ import java.util.List;
 @Data
 public class MenuCheckReportCO extends AbstractClientObject<String> {
 
-    @Size(max = 50)
+    @Size(max = 500)
     private String url;
 
     @Size(max = 50)
