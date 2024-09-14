@@ -17,7 +17,8 @@ public class WeChatClient {
 
     public static void main(String[] args) {
         WeChatClient client = new WeChatClient("ww45a7430c7463efaf", "qjq_himXQqngYoJRn0V-lxbP7ozbOZLQ2QsqKR9_wBs");
-        client.sendMessage("ALv", "hello world");
+        WeChatResponse response = client.sendMessage("ALv", "你好");
+        System.out.println(JSON.toJSONString(response));
     }
 
     private final String corpid;
@@ -48,7 +49,7 @@ public class WeChatClient {
             // 创建 POST 请求
             HttpPost postRequest = new HttpPost("https://qyapi.weixin.qq.com/cgi-bin/message/send?access_token=" + accessToken);
             // 设置请求体
-            StringEntity entity = new StringEntity(JSON.toJSONString(requestMessage));
+            StringEntity entity = new StringEntity(JSON.toJSONString(requestMessage), "UTF-8");
             postRequest.setEntity(entity);
             // 设置请求头
             postRequest.setHeader("Content-Type", "application/json");
